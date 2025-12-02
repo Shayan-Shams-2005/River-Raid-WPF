@@ -1,0 +1,195 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\scroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:scroll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\sound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:sound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\restart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:restart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\creatobstacles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:creatobstacles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\colission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:colission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\movingobstacles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:movingobstacles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|e:\\c#\\projects\\shayan\\river raid wpf\\plane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77DC6BDC-91DE-4987-BB70-5C70AA590236}|River Raid WPF.csproj|solutionrelative:plane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 300,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sound.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Sound.cs",
+              "RelativeDocumentMoniker": "Sound.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Sound.cs",
+              "RelativeToolTip": "Sound.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowJ4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:05:57.959Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Restart.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Restart.cs",
+              "RelativeDocumentMoniker": "Restart.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Restart.cs",
+              "RelativeToolTip": "Restart.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAArwD8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T09:42:09.672Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAkwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T15:42:54.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Animation.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Animation.cs",
+              "RelativeDocumentMoniker": "Animation.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Animation.cs*",
+              "RelativeToolTip": "Animation.cs*",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAkwKcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T07:09:40.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-18T16:26:34.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Scroll.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Scroll.cs",
+              "RelativeDocumentMoniker": "Scroll.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Scroll.cs",
+              "RelativeToolTip": "Scroll.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowG8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:04:21.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreatObstacles.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\CreatObstacles.cs",
+              "RelativeDocumentMoniker": "CreatObstacles.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\CreatObstacles.cs",
+              "RelativeToolTip": "CreatObstacles.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAIwF0BAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T10:45:58.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovingObstacles.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\MovingObstacles.cs",
+              "RelativeDocumentMoniker": "MovingObstacles.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\MovingObstacles.cs",
+              "RelativeToolTip": "MovingObstacles.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwE4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:23:08.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Colission.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Colission.cs",
+              "RelativeDocumentMoniker": "Colission.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Colission.cs",
+              "RelativeToolTip": "Colission.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAtwNUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:25:32.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Plane.cs",
+              "DocumentMoniker": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Plane.cs",
+              "RelativeDocumentMoniker": "Plane.cs",
+              "ToolTip": "E:\\C#\\Projects\\Shayan\\River Raid WPF\\Plane.cs",
+              "RelativeToolTip": "Plane.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAUwEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T08:16:25.561Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

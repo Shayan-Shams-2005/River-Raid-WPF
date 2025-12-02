@@ -1,0 +1,246 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>River_Raid_WPF</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\PressStart2P-Regular.ttf" />
+    <None Remove="Pictures\Air Plane.png" />
+    <None Remove="Pictures\BOOM.png" />
+    <None Remove="Pictures\Destroyed Fuel.png" />
+    <None Remove="Pictures\Destroyed Helicopter.png" />
+    <None Remove="Pictures\Destroyed Right UFO.png" />
+    <None Remove="Pictures\Destroyed Ship.png" />
+    <None Remove="Pictures\Destroyed Space Enemy 1.png" />
+    <None Remove="Pictures\Destroyed Space Enemy 2.png" />
+    <None Remove="Pictures\Destroyed Space Fuel.png" />
+    <None Remove="Pictures\Destroyed UFO Bullet.png" />
+    <None Remove="Pictures\Destroyed UFO.png" />
+    <None Remove="Pictures\Destroyed Used Fuel.png" />
+    <None Remove="Pictures\Destroyed Used Space Fuel.png" />
+    <None Remove="Pictures\Enemy BOOM.png" />
+    <None Remove="Pictures\Fuel.png" />
+    <None Remove="Pictures\Gate.png" />
+    <None Remove="Pictures\Helicopter.png" />
+    <None Remove="Pictures\Home.png" />
+    <None Remove="Pictures\House 2.png" />
+    <None Remove="Pictures\House.png" />
+    <None Remove="Pictures\LeftDestroyed Helicopter.png" />
+    <None Remove="Pictures\LeftDestroyed Ship.png" />
+    <None Remove="Pictures\LeftHelicopter 1.png" />
+    <None Remove="Pictures\LeftHelicopter 3.png" />
+    <None Remove="Pictures\LeftHelicopter.png" />
+    <None Remove="Pictures\LeftShip.png" />
+    <None Remove="Pictures\Right UFO.png" />
+    <None Remove="Pictures\RightDestroyed Helicopter.png" />
+    <None Remove="Pictures\RightDestroyed Ship.png" />
+    <None Remove="Pictures\RightHelicopter 1.png" />
+    <None Remove="Pictures\RightHelicopter 3.png" />
+    <None Remove="Pictures\RightHelicopter.png" />
+    <None Remove="Pictures\RightShip.png" />
+    <None Remove="Pictures\Shayan Shams.png" />
+    <None Remove="Pictures\Shayan Shams1.png" />
+    <None Remove="Pictures\Shayan Shams2.png" />
+    <None Remove="Pictures\Shayan Shams3.png" />
+    <None Remove="Pictures\Shayan Shams4.png" />
+    <None Remove="Pictures\Ship.png" />
+    <None Remove="Pictures\Space Creatures Bullet.png" />
+    <None Remove="Pictures\Space Enemy 1-2.png" />
+    <None Remove="Pictures\Space Enemy 1.png" />
+    <None Remove="Pictures\Space Enemy 2-2.png" />
+    <None Remove="Pictures\Space Enemy 2.png" />
+    <None Remove="Pictures\Space Fuel.png" />
+    <None Remove="Pictures\Space House 1.png" />
+    <None Remove="Pictures\Space.png" />
+    <None Remove="Pictures\The King.png" />
+    <None Remove="Pictures\Tree.png" />
+    <None Remove="Pictures\UFO Bullet.png" />
+    <None Remove="Pictures\UFO.jpg" />
+    <None Remove="Pictures\UFO.png" />
+    <None Remove="Pictures\Used Fuel.png" />
+    <None Remove="Pictures\Used Space Fuel.png" />
+    <None Remove="Sound\Air Plane Explosion.mp3" />
+    <None Remove="Sound\Backgroud 1-2.mp3" />
+    <None Remove="Sound\Backgroud 1-3.mp3" />
+    <None Remove="Sound\Backgroud Theme.mp3" />
+    <None Remove="Sound\Background 1-1.mp3" />
+    <None Remove="Sound\Background 2-1.mp3" />
+    <None Remove="Sound\Background 2-2.mp3" />
+    <None Remove="Sound\Background 2-3.mp3" />
+    <None Remove="Sound\Background 2-4.mp3" />
+    <None Remove="Sound\Background 2-5.mp3" />
+    <None Remove="Sound\Background 2.mp3" />
+    <None Remove="Sound\Background Theme 2.mp3" />
+    <None Remove="Sound\Background Theme.mp3" />
+    <None Remove="Sound\Creatures Bullet Explosion.wav" />
+    <None Remove="Sound\Credits-Pixel Adventure.mp3" />
+    <None Remove="Sound\Final Boss-Chiptune Hibrid.mp3" />
+    <None Remove="Sound\Fuel Charge.mp3" />
+    <None Remove="Sound\Game Over.mp3" />
+    <None Remove="Sound\Glitch.mp3" />
+    <None Remove="Sound\Huge Explosion.wav" />
+    <None Remove="Sound\in-game-level-uptype-2-230567.mp3" />
+    <None Remove="Sound\Mystery Box.wav" />
+    <None Remove="Sound\Obstacles Explosion.mp3" />
+    <None Remove="Sound\pixel-death-66829.mp3" />
+    <None Remove="Sound\pixel-explosion-319166.mp3" />
+    <None Remove="Sound\pixel-game-over-319170.mp3" />
+    <None Remove="Sound\pixel-song-21-72593.mp3" />
+    <None Remove="Sound\Shayan Sound.wav" />
+    <None Remove="Sound\Shoting.wav" />
+    <None Remove="Sound\silence.wav" />
+    <None Remove="Sound\Space Creatures Down.wav" />
+    <None Remove="Sound\Space Fuel Charge.mp3" />
+    <None Remove="Sound\Starting.mp3" />
+    <None Remove="Sound\toby fox - UNDERTALE Soundtrack - 70 Long Elevator.mp3" />
+    <None Remove="Sound\UFO Bullet Explosion.wav" />
+    <None Remove="Sound\UFO Explosion.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sound\Backgroud 1-2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Backgroud 1-3.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Background 1-1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Background 2-1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Background 2-2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Background 2-3.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Mystery Box.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Shayan Sound.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\silence.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\PressStart2P-Regular.ttf" />
+    <Resource Include="Pictures\Air Plane.png" />
+    <Resource Include="Pictures\BOOM.png" />
+    <Resource Include="Pictures\Destroyed Fuel.png" />
+    <Resource Include="Pictures\Destroyed Right UFO.png" />
+    <Resource Include="Pictures\Destroyed Space Enemy 1.png" />
+    <Resource Include="Pictures\Destroyed Space Enemy 2.png" />
+    <Resource Include="Pictures\Destroyed Space Fuel.png" />
+    <Resource Include="Pictures\Destroyed UFO Bullet.png" />
+    <Resource Include="Pictures\Destroyed UFO.png" />
+    <Resource Include="Pictures\Destroyed Used Fuel.png" />
+    <Resource Include="Pictures\Destroyed Used Space Fuel.png" />
+    <Resource Include="Pictures\Fuel.png" />
+    <Resource Include="Pictures\Home.png" />
+    <Resource Include="Pictures\House 2.png" />
+    <Resource Include="Pictures\LeftDestroyed Helicopter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\LeftDestroyed Ship.png" />
+    <Resource Include="Pictures\LeftHelicopter 1.png" />
+    <Resource Include="Pictures\LeftHelicopter 3.png" />
+    <Resource Include="Pictures\LeftHelicopter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\LeftShip.png" />
+    <Resource Include="Pictures\Right UFO.png" />
+    <Resource Include="Pictures\RightDestroyed Helicopter.png" />
+    <Resource Include="Pictures\RightDestroyed Ship.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\RightHelicopter 1.png" />
+    <Resource Include="Pictures\RightHelicopter 3.png" />
+    <Resource Include="Pictures\RightHelicopter.png" />
+    <Resource Include="Pictures\RightShip.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\Shayan Shams.png" />
+    <Resource Include="Pictures\Shayan Shams1.png" />
+    <Resource Include="Pictures\Shayan Shams2.png" />
+    <Resource Include="Pictures\Shayan Shams3.png" />
+    <Resource Include="Pictures\Shayan Shams4.png" />
+    <Resource Include="Pictures\Space Creatures Bullet.png" />
+    <Resource Include="Pictures\Space Enemy 1-2.png" />
+    <Resource Include="Pictures\Space Enemy 1.png" />
+    <Resource Include="Pictures\Space Enemy 2-2.png" />
+    <Resource Include="Pictures\Space Enemy 2.png" />
+    <Resource Include="Pictures\Space Fuel.png" />
+    <Resource Include="Pictures\Space.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\The King.png" />
+    <Resource Include="Pictures\Tree.png" />
+    <Resource Include="Pictures\UFO Bullet.png" />
+    <Resource Include="Pictures\UFO.png" />
+    <Resource Include="Pictures\Used Fuel.png" />
+    <Resource Include="Pictures\Used Space Fuel.png" />
+    <Content Include="Sound\toby fox - UNDERTALE Soundtrack - 70 Long Elevator.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Backgroud Theme.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Air Plane Explosion.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Background 2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Creatures Bullet Explosion.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Credits-Pixel Adventure.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Final Boss-Chiptune Hibrid.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Fuel Charge.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Game Over.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Glitch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Huge Explosion.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Obstacles Explosion.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Shoting.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Space Creatures Down.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Space Fuel Charge.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\UFO Bullet Explosion.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\UFO Explosion.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

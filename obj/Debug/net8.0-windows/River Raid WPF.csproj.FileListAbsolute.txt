@@ -1,0 +1,47 @@
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\River Raid WPF.exe
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Backgroud 1-2.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Backgroud 1-3.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 1-1.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2-1.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2-2.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2-3.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Mystery Box.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\silence.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\toby fox - UNDERTALE Soundtrack - 70 Long Elevator.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Backgroud Theme.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Air Plane Explosion.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Creatures Bullet Explosion.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Credits-Pixel Adventure.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Final Boss-Chiptune Hibrid.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Fuel Charge.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Game Over.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Glitch.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Huge Explosion.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Obstacles Explosion.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Shoting.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Space Creatures Down.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Space Fuel Charge.mp3
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\UFO Bullet Explosion.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\UFO Explosion.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\River Raid WPF.deps.json
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\River Raid WPF.runtimeconfig.json
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\River Raid WPF.dll
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\River Raid WPF.pdb
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\MainWindow.g.cs
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\App.g.cs
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF_Content.g.cs
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF_MarkupCompile.cache
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF_MarkupCompile.lref
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\MainWindow.baml
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.g.resources
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.AssemblyInfoInputs.cache
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.AssemblyInfo.cs
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.csproj.CoreCompileInputs.cache
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.dll
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\refint\River Raid WPF.dll
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.pdb
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.genruntimeconfig.cache
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\ref\River Raid WPF.dll
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Shayan Sound.wav
