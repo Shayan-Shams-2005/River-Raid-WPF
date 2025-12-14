@@ -45,11 +45,11 @@ namespace River_Raid_WPF
         public DispatcherTimer gameTimer = new DispatcherTimer();
         public DispatcherTimer TimerRecord;
 
+        public bool Missile=false;
+        public bool Bullets = true;
 
         public MainWindow()
         {
-            
-
             InitializeComponent();
 
             Sound = new Sound(this);                     // اول Sound بساز
@@ -89,9 +89,21 @@ namespace River_Raid_WPF
 
         public void GameLoop(object sender, EventArgs e)
         {
-            animation.MoveBullets();
+            if (int.Parse(LevelCount.Text) >= 6)
+            {
+                SpeedBorder.Visibility = Visibility.Collapsed;
+                BulletBorder.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                SpeedBorder.Visibility = Visibility.Visible;
+                BulletBorder.Visibility = Visibility.Collapsed;
+            }
 
-            Sound.BackgroundMusic();
+            if (Bullets) animation.MoveBullets();
+            else if(Missile) animation.MoveMissiles();
+
+                Sound.BackgroundMusic();
 
             animation.AnimateHelicopters(scrollContent1);
             animation.AnimateHelicopters(scrollContent2);
@@ -178,7 +190,7 @@ namespace River_Raid_WPF
             {
                 tbScore.Text = (int.Parse(tbScore.Text) + 500).ToString();
             }
-            else if(rect.Fill==Brushes.MediumPurple)
+            else if(rect.Name.ToString()=="SpaceShip")
             {
                 tbScore.Text = (int.Parse(tbScore.Text) + 1000).ToString();
             }
@@ -215,27 +227,46 @@ namespace River_Raid_WPF
 
             if (!restart.inputEnabled) return;
 
-            if (e.Key == Key.Up)
+            if (int.Parse(LevelCount.Text) < 6)
             {
-                scroll.scrollSpeed += 2;
-            }
+                if (e.Key == Key.Up)
+                {
+                    scroll.scrollSpeed += 2;
+                }
 
-            if (e.Key == Key.Down)
+                if (e.Key == Key.Down)
+                {
+                    scroll.scrollSpeed -= 2;
+                }
+                scroll.ControlScrollSpeed();
+                animation.FuelClearationTime = 20 - (scroll.scrollSpeed * 1.3);
+                plane.ControlFuel();
+                animation.FuelAnimation();
+                restart.GameStart();
+            }
+            else
             {
-                scroll.scrollSpeed -= 2;
+                if (e.Key == Key.Up)
+                {
+                   if(Canvas.GetTop(BulletRect)!=15)
+                    {
+                        Canvas.SetTop(BulletRect, 15);
+                        Missile = true;
+                        Bullets = false;
+                    }
+                }
+
+                if (e.Key == Key.Down)
+                {
+                    if (Canvas.GetTop(BulletRect) != 50)
+                    {
+                        Canvas.SetTop(BulletRect, 50);
+                        Missile = false;
+                        Bullets = true;
+                    }
+                }
             }
-            scroll.ControlScrollSpeed();
-            animation.FuelClearationTime = 20 - (scroll.scrollSpeed * 1.3);
-            plane.ControlFuel();
-
-            animation.FuelAnimation();
-
-
-
-            restart.GameStart();
-
-
-            double airPlaneLeft = Canvas.GetLeft(airPlane);
+                double airPlaneLeft = Canvas.GetLeft(airPlane);
 
             if (e.Key == Key.Left)
             {
@@ -251,8 +282,9 @@ namespace River_Raid_WPF
             if (e.Key == Key.Space && !plane.isShooting)
             {
                 plane.isShooting = true;
-                animation.Shot();
-                animation.shootTimer.Start();
+                if (Bullets) animation.Shot();
+                else if (Missile) animation.MissileLaunch();
+                    animation.shootTimer.Start();
             }
         }
         

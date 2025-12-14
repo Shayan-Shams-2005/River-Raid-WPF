@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation.Provider;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
@@ -12,7 +13,7 @@ namespace River_Raid_WPF
         public double scrollSpeed = 5;
         public double SpaceLevelCount = 0;
         private double top = 0;
-        bool spaceIntroPlayed = false;
+        public bool spaceIntroPlayed = false;
         public bool InvokedShowUFO1 = false;
         public bool InvokedShowUFO2= false;
 
@@ -97,11 +98,18 @@ namespace River_Raid_WPF
 
         public async Task ScrollSpaceContent()
         {
-            double speed =2;
+           
+
+            if (Canvas.GetTop(mainWindow.SpaceShip) <= -29)
+            {
+                Canvas.SetTop(mainWindow.SpaceShip, Canvas.GetTop(mainWindow.SpaceShip) + 1);
+            }
+
+            double speed = 2;
             MoveSpace(mainWindow.Space1, mainWindow.Space2, speed);
             MoveSpace(mainWindow.Space2, mainWindow.Space1, speed);
 
-            if (SpaceLevelCount <= 2 && !spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating && mainWindow.LevelCount.Text=="6")
+            if (SpaceLevelCount <= 2 && !spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating && mainWindow.LevelCount.Text == "6")
             {
                 mainWindow.animation.ShayanSpaceIntroAnimation();
                 spaceIntroPlayed = true;
@@ -112,35 +120,70 @@ namespace River_Raid_WPF
                 mainWindow.animation.ShayanSpaceoAnimation2();
                 spaceIntroPlayed = true;
             }
-            if (!spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating && mainWindow.MysteryBox.Visibility==Visibility.Visible && mainWindow.LevelCount.Text == "8")
+            if (!spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating && mainWindow.SpaceShip.Visibility == Visibility.Visible && mainWindow.LevelCount.Text == "8")
             {
-                mainWindow.animation.TypeTextAsync("DESTROY! DESTROY!",40);
+                mainWindow.animation.TypeTextAsync("DESTROY! DESTROY!", 40);
                 mainWindow.animation.AnimateShayanOnce();
                 spaceIntroPlayed = true;
             }
 
-            if (SpaceLevelCount == 2 && mainWindow.MysteryBox.Fill != Brushes.Red && !mainWindow.animation.AnimationIsPlaying)
+            if (SpaceLevelCount == 2 && !mainWindow.colission.SpaceShipDestroyed && !mainWindow.animation.AnimationIsPlaying &&
+                int.Parse(mainWindow.LevelCount.Text) <= 9 && mainWindow.SpaceShip.Visibility != Visibility.Visible)
             {
-                mainWindow.MysteryBox.Visibility = Visibility.Visible;
+                spaceShipChoose();
+                Canvas.SetTop(mainWindow.SpaceShip, -200);
+                mainWindow.SpaceShip.Visibility = Visibility.Visible;
             }
 
-            if (mainWindow.LevelCount.Text == "9" && mainWindow.MysteryBox.Visibility==Visibility.Visible && mainWindow.MysteryBox.Fill==Brushes.MediumPurple && !spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating)
+            if (mainWindow.LevelCount.Text == "9" && mainWindow.SpaceShip.Visibility == Visibility.Visible && !mainWindow.colission.SpaceShipDestroyed && !spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating)
             {
-                mainWindow.Sound.currentPlayer.Volume = 0.2;
-                spaceIntroPlayed=true;
+                mainWindow.animation.TypeTextAsync("This is The Last", 40);
+                mainWindow.animation.AnimateShayanOnce();
+                spaceIntroPlayed = true;
+            }
+
+            if (mainWindow.LevelCount.Text == "10" && mainWindow.SpaceShip.Visibility == Visibility.Collapsed &&
+                !mainWindow.colission.SpaceShipDestroyed && !spaceIntroPlayed && !mainWindow.creatObstacles.Creatures1Creating && mainWindow.colission.PlanetShootCount == 0)
+            {
+                mainWindow.animation.ShayanSpaceAnimation3();
+                spaceIntroPlayed = true;
+            }
+            else if (mainWindow.colission.PlanetShootCount == 1 && !spaceIntroPlayed)
+            {
+                mainWindow.animation.TypeTextAsync("Shoot Again", 40);
+                mainWindow.animation.AnimateShayanOnce();
+                spaceIntroPlayed = true;
+            }
+            else if (mainWindow.colission.PlanetShootCount == 2 && !spaceIntroPlayed)
+            {
+                mainWindow.animation.TypeTextAsync("It is Working!", 40);
+                mainWindow.animation.AnimateShayanOnce();
+                spaceIntroPlayed = true;
+            }
+            else if (mainWindow.colission.PlanetShootCount == 3 && !spaceIntroPlayed)
+            {
+                mainWindow.animation.TypeTextAsync("They're Destroying!", 40);
+                mainWindow.animation.AnimateShayanOnce();
+                spaceIntroPlayed = true;
+            }
+            else if (mainWindow.colission.PlanetShootCount == 4 && !spaceIntroPlayed)
+            {
+
+                mainWindow.animation.ShayanSpaceAnimation4();
+                spaceIntroPlayed = true;
             }
 
 
-            if (mainWindow.MysteryBox.Fill == Brushes.Red &&
-                mainWindow.MysteryBox.Visibility == Visibility.Collapsed)
+            if (mainWindow.colission.SpaceShipDestroyed &&
+                mainWindow.SpaceShip.Visibility == Visibility.Collapsed)
             {
-                if (int.Parse(mainWindow.LevelCount.Text) <=9 && int.Parse(mainWindow.LevelCount.Text)>=7 && !AllEnemeysAreClear() && mainWindow.creatObstacles.Creatures1Created)
+                if (int.Parse(mainWindow.LevelCount.Text) <= 9 && int.Parse(mainWindow.LevelCount.Text) >= 7 && !AllEnemeysAreClear() && mainWindow.creatObstacles.Creatures1Created)
                 {
 
                     if (mainWindow.UFO1.Visibility != Visibility.Visible && !InvokedShowUFO1)
                     {
                         ShowUFOAsync(mainWindow.UFO1);
-                        InvokedShowUFO1= true;
+                        InvokedShowUFO1 = true;
 
                     }
                     if (mainWindow.UFO2.Visibility != Visibility.Visible && !InvokedShowUFO2)
@@ -152,19 +195,19 @@ namespace River_Raid_WPF
                 }
 
 
-                if (Canvas.GetTop(mainWindow.Fuel1)<=200)
+                if (Canvas.GetTop(mainWindow.Fuel1) <= 200)
                 {
-                    Canvas.SetTop(mainWindow.Fuel1,Canvas.GetTop(mainWindow.Fuel1) + 1);
+                    Canvas.SetTop(mainWindow.Fuel1, Canvas.GetTop(mainWindow.Fuel1) + 1);
                 }
                 if (Canvas.GetTop(mainWindow.Fuel2) <= 200)
                 {
                     Canvas.SetTop(mainWindow.Fuel2, Canvas.GetTop(mainWindow.Fuel2) + 1);
                 }
-                if (mainWindow.Fuel1.Visibility==Visibility.Collapsed)
+                if (mainWindow.Fuel1.Visibility == Visibility.Collapsed)
                 {
                     Canvas.SetTop(mainWindow.Fuel1, -300);
                     mainWindow.Fuel1.Fill = mainWindow.creatObstacles.SpaceFuelImage;
-                    mainWindow.Fuel1.Visibility=Visibility.Visible;
+                    mainWindow.Fuel1.Visibility = Visibility.Visible;
                     mainWindow.Fuel1.Name = "Fuel1";
                 }
                 if (mainWindow.Fuel2.Visibility == Visibility.Collapsed)
@@ -192,11 +235,11 @@ namespace River_Raid_WPF
                     mainWindow.scrollContent3
                      );
 
-                   mainWindow.creatObstacles.CreatSpaceCreature2(
-                   mainWindow.creatObstacles.Run2Creatures2Left,
-                   mainWindow.creatObstacles.Run2Creatures2Top,
-                   mainWindow.scrollContent3
-                    );
+                    mainWindow.creatObstacles.CreatSpaceCreature2(
+                    mainWindow.creatObstacles.Run2Creatures2Left,
+                    mainWindow.creatObstacles.Run2Creatures2Top,
+                    mainWindow.scrollContent3
+                     );
 
                 }
                 if (mainWindow.LevelCount.Text == "8" && !mainWindow.creatObstacles.Creatures1Creating && !mainWindow.creatObstacles.Creatures2Creating)
@@ -233,7 +276,6 @@ namespace River_Raid_WPF
             if (AllEnemeysAreClear() && SpaceLevelCount >= 2)
             {
                 SpaceLevelCount = 0;
-                mainWindow.MysteryBox.Fill = Brushes.MediumPurple;
                 HideUFO();
                 spaceIntroPlayed = false;
                 mainWindow.creatObstacles.Creatures1Created = false;
@@ -244,8 +286,34 @@ namespace River_Raid_WPF
                 {
                     UpdateLevel();
                 }
+                spaceShipChoose();
+               /* if (mainWindow.LevelCount.Text != "10" && SpaceLevelCount >= 2)
+                {
+                   // Canvas.SetTop(mainWindow.SpaceShip, -200);
+                    mainWindow.SpaceShip.Visibility = Visibility.Visible;
+                }*/
             }
-
+        }
+        public void spaceShipChoose()
+        {
+            int level = int.Parse(mainWindow.LevelCount.Text);
+            mainWindow.colission.SpaceShipDestroyed = false;
+            if (level==6 && mainWindow.SpaceShip.Fill==Brushes.MediumPurple)
+            {
+                mainWindow.SpaceShip.Fill= mainWindow.creatObstacles.SpaceShip11;
+            }
+            else if(level==7 && mainWindow.SpaceShip.Fill == mainWindow.creatObstacles.SpaceShip16)
+            {
+                mainWindow.SpaceShip.Fill = mainWindow.creatObstacles.SpaceShip21;
+            }
+            else if (level == 8 && mainWindow.SpaceShip.Fill == mainWindow.creatObstacles.SpaceShip26)
+            {
+                mainWindow.SpaceShip.Fill = mainWindow.creatObstacles.SpaceShip31;
+            }
+            else if(level==9 && mainWindow.SpaceShip.Fill == mainWindow.creatObstacles.SpaceShip33)
+            {
+                mainWindow.SpaceShip.Fill = mainWindow.creatObstacles.SpaceShip41;
+            }
         }
         
         public async Task HideUFO()
@@ -281,7 +349,7 @@ namespace River_Raid_WPF
             if (top >= 325)
             {
                 top = Canvas.GetTop(otherSpace) - 325;
-                if (mainWindow.MysteryBox.Visibility == Visibility.Collapsed)
+                if (mainWindow.SpaceShip.Visibility == Visibility.Collapsed)
                     SpaceLevelCount++;
             }
             Canvas.SetTop(space, top);

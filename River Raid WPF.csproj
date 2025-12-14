@@ -17,6 +17,7 @@
     <None Remove="Pictures\Destroyed Helicopter.png" />
     <None Remove="Pictures\Destroyed Right UFO.png" />
     <None Remove="Pictures\Destroyed Ship.png" />
+    <None Remove="Pictures\Destroyed Space Creatures Bullet.png" />
     <None Remove="Pictures\Destroyed Space Enemy 1.png" />
     <None Remove="Pictures\Destroyed Space Enemy 2.png" />
     <None Remove="Pictures\Destroyed Space Fuel.png" />
@@ -31,12 +32,25 @@
     <None Remove="Pictures\Home.png" />
     <None Remove="Pictures\House 2.png" />
     <None Remove="Pictures\House.png" />
+    <None Remove="Pictures\KingsSpaceShip.png" />
+    <None Remove="Pictures\KingsSpaceShip1.png" />
+    <None Remove="Pictures\KingsSpaceShip2.png" />
+    <None Remove="Pictures\KingsSpaceShip3.png" />
+    <None Remove="Pictures\KingsSpaceShip4.png" />
+    <None Remove="Pictures\KingsSpaceShip5.png" />
+    <None Remove="Pictures\KingsSpaceShip6.png" />
     <None Remove="Pictures\LeftDestroyed Helicopter.png" />
     <None Remove="Pictures\LeftDestroyed Ship.png" />
     <None Remove="Pictures\LeftHelicopter 1.png" />
     <None Remove="Pictures\LeftHelicopter 3.png" />
     <None Remove="Pictures\LeftHelicopter.png" />
     <None Remove="Pictures\LeftShip.png" />
+    <None Remove="Pictures\Plane Bullet.png" />
+    <None Remove="Pictures\Plane Bullet1.png" />
+    <None Remove="Pictures\Plane Bullet2.png" />
+    <None Remove="Pictures\Planet.png" />
+    <None Remove="Pictures\Portal.png" />
+    <None Remove="Pictures\Portal2.png" />
     <None Remove="Pictures\Right UFO.png" />
     <None Remove="Pictures\RightDestroyed Helicopter.png" />
     <None Remove="Pictures\RightDestroyed Ship.png" />
@@ -51,6 +65,8 @@
     <None Remove="Pictures\Shayan Shams4.png" />
     <None Remove="Pictures\Ship.png" />
     <None Remove="Pictures\Space Creatures Bullet.png" />
+    <None Remove="Pictures\Space Enemies Bullet1.png" />
+    <None Remove="Pictures\Space Enemies Bullet2.png" />
     <None Remove="Pictures\Space Enemy 1-2.png" />
     <None Remove="Pictures\Space Enemy 1.png" />
     <None Remove="Pictures\Space Enemy 2-2.png" />
@@ -58,6 +74,30 @@
     <None Remove="Pictures\Space Fuel.png" />
     <None Remove="Pictures\Space House 1.png" />
     <None Remove="Pictures\Space.png" />
+    <None Remove="Pictures\SpaceShip1-1.png" />
+    <None Remove="Pictures\SpaceShip1-2.png" />
+    <None Remove="Pictures\SpaceShip1-3.png" />
+    <None Remove="Pictures\SpaceShip1-4.png" />
+    <None Remove="Pictures\SpaceShip1-5.png" />
+    <None Remove="Pictures\SpaceShip1-6.png" />
+    <None Remove="Pictures\SpaceShip1.png" />
+    <None Remove="Pictures\SpaceShip2-1.png" />
+    <None Remove="Pictures\SpaceShip2-2.png" />
+    <None Remove="Pictures\SpaceShip2-3.png" />
+    <None Remove="Pictures\SpaceShip2-4.png" />
+    <None Remove="Pictures\SpaceShip2-5.png" />
+    <None Remove="Pictures\SpaceShip2-6.png" />
+    <None Remove="Pictures\SpaceShip2.png" />
+    <None Remove="Pictures\SpaceShip3-1.png" />
+    <None Remove="Pictures\SpaceShip3-2.png" />
+    <None Remove="Pictures\SpaceShip3-3.png" />
+    <None Remove="Pictures\SpaceShip3.png" />
+    <None Remove="Pictures\SpaceShip4-1.png" />
+    <None Remove="Pictures\SpaceShip4-2.png" />
+    <None Remove="Pictures\SpaceShip4-3.png" />
+    <None Remove="Pictures\SpaceShip4-4.png" />
+    <None Remove="Pictures\SpaceShip4-5.png" />
+    <None Remove="Pictures\SpaceShip4-6.png" />
     <None Remove="Pictures\The King.png" />
     <None Remove="Pictures\Tree.png" />
     <None Remove="Pictures\UFO Bullet.png" />
@@ -139,6 +179,7 @@
     <Resource Include="Pictures\BOOM.png" />
     <Resource Include="Pictures\Destroyed Fuel.png" />
     <Resource Include="Pictures\Destroyed Right UFO.png" />
+    <Resource Include="Pictures\Destroyed Space Creatures Bullet.png" />
     <Resource Include="Pictures\Destroyed Space Enemy 1.png" />
     <Resource Include="Pictures\Destroyed Space Enemy 2.png" />
     <Resource Include="Pictures\Destroyed Space Fuel.png" />
@@ -149,6 +190,12 @@
     <Resource Include="Pictures\Fuel.png" />
     <Resource Include="Pictures\Home.png" />
     <Resource Include="Pictures\House 2.png" />
+    <Resource Include="Pictures\KingsSpaceShip1.png" />
+    <Resource Include="Pictures\KingsSpaceShip2.png" />
+    <Resource Include="Pictures\KingsSpaceShip3.png" />
+    <Resource Include="Pictures\KingsSpaceShip4.png" />
+    <Resource Include="Pictures\KingsSpaceShip5.png" />
+    <Resource Include="Pictures\KingsSpaceShip6.png" />
     <Resource Include="Pictures\LeftDestroyed Helicopter.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -159,6 +206,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\LeftShip.png" />
+    <Resource Include="Pictures\Plane Bullet.png" />
+    <Resource Include="Pictures\Plane Bullet1.png" />
+    <Resource Include="Pictures\Plane Bullet2.png" />
+    <Resource Include="Pictures\Planet.png" />
+    <Resource Include="Pictures\Portal.png" />
+    <Resource Include="Pictures\Portal2.png" />
     <Resource Include="Pictures\Right UFO.png" />
     <Resource Include="Pictures\RightDestroyed Helicopter.png" />
     <Resource Include="Pictures\RightDestroyed Ship.png">
@@ -175,7 +228,8 @@
     <Resource Include="Pictures\Shayan Shams2.png" />
     <Resource Include="Pictures\Shayan Shams3.png" />
     <Resource Include="Pictures\Shayan Shams4.png" />
-    <Resource Include="Pictures\Space Creatures Bullet.png" />
+    <Resource Include="Pictures\Space Enemies Bullet1.png" />
+    <Resource Include="Pictures\Space Enemies Bullet2.png" />
     <Resource Include="Pictures\Space Enemy 1-2.png" />
     <Resource Include="Pictures\Space Enemy 1.png" />
     <Resource Include="Pictures\Space Enemy 2-2.png" />
@@ -184,6 +238,27 @@
     <Resource Include="Pictures\Space.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Pictures\SpaceShip1-1.png" />
+    <Resource Include="Pictures\SpaceShip1-2.png" />
+    <Resource Include="Pictures\SpaceShip1-3.png" />
+    <Resource Include="Pictures\SpaceShip1-4.png" />
+    <Resource Include="Pictures\SpaceShip1-5.png" />
+    <Resource Include="Pictures\SpaceShip1-6.png" />
+    <Resource Include="Pictures\SpaceShip2-1.png" />
+    <Resource Include="Pictures\SpaceShip2-2.png" />
+    <Resource Include="Pictures\SpaceShip2-3.png" />
+    <Resource Include="Pictures\SpaceShip2-4.png" />
+    <Resource Include="Pictures\SpaceShip2-5.png" />
+    <Resource Include="Pictures\SpaceShip2-6.png" />
+    <Resource Include="Pictures\SpaceShip3-1.png" />
+    <Resource Include="Pictures\SpaceShip3-2.png" />
+    <Resource Include="Pictures\SpaceShip3-3.png" />
+    <Resource Include="Pictures\SpaceShip4-1.png" />
+    <Resource Include="Pictures\SpaceShip4-2.png" />
+    <Resource Include="Pictures\SpaceShip4-3.png" />
+    <Resource Include="Pictures\SpaceShip4-4.png" />
+    <Resource Include="Pictures\SpaceShip4-5.png" />
+    <Resource Include="Pictures\SpaceShip4-6.png" />
     <Resource Include="Pictures\The King.png" />
     <Resource Include="Pictures\Tree.png" />
     <Resource Include="Pictures\UFO Bullet.png" />

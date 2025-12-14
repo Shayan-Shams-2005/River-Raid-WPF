@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,13 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Microsoft.Win32.SafeHandles;
 namespace River_Raid_WPF
 {
     public class Animation
     {
         public Storyboard fuelStoryboard;
-        
+        public Storyboard KingsStoryBoard;
         //Credit Variables
         public Storyboard creditStoryboard;
 
@@ -30,8 +32,10 @@ namespace River_Raid_WPF
 
         //Shot Variables
         public List<Rectangle> bulletsList = new List<Rectangle>();
+        public List<Rectangle> MissileList = new List<Rectangle>();
         public DispatcherTimer shootTimer = new DispatcherTimer();
         public int bulletSpeed = 25;
+        public double MissileSpeed = 5;
 
         //
         List<Rectangle> bullets = new();
@@ -175,37 +179,250 @@ namespace River_Raid_WPF
             AnimationIsPlaying = false;
 
         }
-        public async Task KingAnimation()
+        public async Task ShayanSpaceAnimation3()
         {
-            AnimationIsPlaying = true;
             mainWindow.restart.inputEnabled = false;
+            AnimationIsPlaying = true;
+            await Task.Delay(2000);
             mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams1.png"));
-            mainWindow.animation.TypeTextAsync("This is The Last!",40);
+            TypeTextAsync("Now...", 40);
+            mainWindow.DialogBorder.Visibility = Visibility.Visible;
+            await Task.Delay(1000);
+
+            TypeTextAsync("Time For Their Planet!.", 40);
+            mainWindow.DialogBorder.Visibility =  Visibility.Visible;
+            // زمان نمایش دیالوگ
+            await Task.Delay(2500);
+
+            mainWindow.Planet.Fill = mainWindow.creatObstacles.Mars;
+            mainWindow.Planet.Visibility = Visibility.Visible;
+
+            TypeTextAsync("Shoot!.", 40);
+
+            await Task.Delay(1000);
             mainWindow.DialogBorder.Visibility = Visibility.Visible;
 
-            await Task.Delay(2000);
             mainWindow.DialogBorder.Visibility = Visibility.Hidden;
-
-            mainWindow.animation.TypeTextAsync("Shoot That!",40);
-            mainWindow.DialogBorder.Visibility = Visibility.Visible;
-
-            await Task.Delay(2000);
-            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams.png"));
-            mainWindow.DialogBorder.Visibility = Visibility.Hidden;
-
-            //King
-            mainWindow.King.Visibility = Visibility.Visible;
-
-            mainWindow.animation.TypeTextAsync("Pls  Stop!",40);
-            mainWindow.KingsDialogBorder.Visibility = Visibility.Visible;
-
-            await Task.Delay(2000);
-            mainWindow.KingsDialogBorder.Visibility = Visibility.Hidden;
 
             mainWindow.restart.inputEnabled = true;
             AnimationIsPlaying = false;
 
         }
+        public async Task ShayanSpaceAnimation4()
+        {
+            mainWindow.restart.inputEnabled = false;
+            AnimationIsPlaying = true;
+            await Task.Delay(2000);
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams1.png"));
+            TypeTextAsync("Now", 40);
+            mainWindow.DialogBorder.Visibility = Visibility.Visible;
+            await Task.Delay(2000);
+
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams.png"));
+            await Task.Delay(1000);
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams1.png"));
+            await Task.Delay(500);
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams2.png"));
+            await Task.Delay(1000);
+            TypeTextAsync("The Last Shot!.", 40);
+            await Task.Delay(2000);
+
+            TypeTextAsync("We're Gonna WIN!.", 40);
+            await Task.Delay(1000);
+
+            TypeTextAsync("This is Our Chance!.", 40);
+
+            await Task.Delay(1000);
+
+            TypeTextAsync("Do That...", 40);
+
+
+            KingsArriving();
+
+            await Task.Delay(2000);
+            mainWindow.DialogBorder.Visibility = Visibility.Hidden;
+
+            await Task.Delay(500);
+
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams1.png"));
+
+            await Task.Delay(500);
+
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams.png"));          
+        }
+        public async Task KingsDialog()
+        {
+            mainWindow.tbKingDialog.Text = "pls Stop!";
+            mainWindow.KingsDialogBorder.Visibility = Visibility.Visible;
+
+            await Task.Delay(1000);
+
+            mainWindow.tbKingDialog.Text = "He is Lying to You!";
+
+            await Task.Delay(2000);
+
+            mainWindow.tbKingDialog.Text = "He ...";
+
+            await Task.Delay(2000);
+
+            mainWindow.tbKingDialog.Text = "is...";
+
+            await Task.Delay(2000);
+
+            mainWindow.tbKingDialog.Text = "oh My God...";
+
+            await Task.Delay(2000);
+
+            mainWindow.tbKingDialog.Text = "He is Gonna Kill Me";
+
+            await Task.Delay(2000);
+
+            mainWindow.tbKingDialog.Text = "He Will Destroy You After That!";
+
+            await Task.Delay(2000);
+
+
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams1.png"));
+
+            await Task.Delay(500);
+
+            mainWindow.Shayan.Source = new BitmapImage(new Uri("pack://application:,,,/Pictures/Shayan Shams3.png"));
+
+            TypeTextAsync("Shut it UP!!", 40);
+            mainWindow.DialogBorder.Visibility = Visibility.Visible;
+            await Task.Delay(2000);
+
+            mainWindow.DialogBorder.Visibility = Visibility.Hidden;
+
+            mainWindow.restart.inputEnabled = true;
+            AnimationIsPlaying = false;
+        }
+        public async Task KingsArriving()
+        {
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip1;
+            mainWindow.KingsSpaceShip.Visibility = Visibility.Visible;
+
+            kingsSpaceShipScale();
+            kingsSpaceShipMovement();
+        }
+
+        public async Task KingsSpacceShipOpening()
+        {
+            await Task.Delay(3000);
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip2;
+            await Task.Delay(500);
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip3;
+            await Task.Delay(500);
+
+            mainWindow.King.Visibility=Visibility.Visible;
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip4;
+            await Task.Delay(1000);
+
+            kingsMovementTop();
+
+            await Task.Delay(4000);
+
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip4;
+            await Task.Delay(500);
+
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip5;
+            await Task.Delay(500);
+            mainWindow.KingsSpaceShip.Source = mainWindow.creatObstacles.kingsSpaceShip6;  
+
+            await Task.Delay(1000);
+
+            SpaceShipMovement();
+        }
+
+        public void SpaceShipMovement()
+        {
+            var anim = new DoubleAnimation
+            {
+                From = Canvas.GetLeft(mainWindow.KingsSpaceShip),
+                To = -500,
+                Duration = TimeSpan.FromSeconds(2)
+            };
+
+            anim.Completed += (s, e) =>
+            {
+                KingsDialog(); // async call
+            };
+            mainWindow.KingsSpaceShip.BeginAnimation(Canvas.LeftProperty, anim);
+        
+        }
+
+        public void kingsMovementTop()
+        {
+            var anim = new DoubleAnimation
+            {
+                From = Canvas.GetTop(mainWindow.King),
+                To = 0,
+                Duration = TimeSpan.FromSeconds(3)
+            };
+
+            anim.Completed += (s, e) =>
+            {
+                kingsMovementLeft(); // async call
+            };
+
+            mainWindow.King.BeginAnimation(Canvas.TopProperty, anim);
+        }
+        public void kingsMovementLeft()
+        {
+            var anim = new DoubleAnimation
+            {
+                From = Canvas.GetLeft(mainWindow.King),
+                To = 50,
+                Duration = TimeSpan.FromSeconds(3)
+            };
+            mainWindow.King.BeginAnimation(Canvas.LeftProperty, anim);
+        }
+
+        public void kingsSpaceShipScale()
+        {
+            var anim = new DoubleAnimation
+            {
+                From = 0.25,
+                To = 20,
+                Duration = TimeSpan.FromSeconds(10)
+            };
+
+            anim.Completed += (s, e) =>
+            {
+                _ = KingsSpacceShipOpening(); // async call
+            };
+
+            mainWindow.kingScale.BeginAnimation(ScaleTransform.ScaleXProperty, anim);
+            mainWindow.kingScale.BeginAnimation(ScaleTransform.ScaleYProperty, anim);
+
+        }
+
+
+        public void kingsSpaceShipMovement()
+        {
+            // Animation for Canvas.Left
+            var leftAnim = new DoubleAnimation
+            {
+                To = 100,
+                Duration = TimeSpan.FromSeconds(10),
+                EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut }
+            };
+
+            // Animation for Canvas.Top
+            var topAnim = new DoubleAnimation
+            {
+                To = 10,
+                Duration = TimeSpan.FromSeconds(10),
+                EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut }
+            };
+
+            // Start animations
+            mainWindow.KingsSpaceShip.BeginAnimation(Canvas.LeftProperty, leftAnim);
+            mainWindow.KingsSpaceShip.BeginAnimation(Canvas.TopProperty, topAnim);
+        }
+
+
+
 
         //انیمیشن مربوط به نمایش سوخت 
         public void FuelAnimation()
@@ -264,6 +481,58 @@ namespace River_Raid_WPF
             fuelStoryboard.Begin(mainWindow, true);
         }
 
+        public void MissileLaunch()
+        {
+            mainWindow.Sound.ShootingSound();
+
+            Rectangle Missile = new Rectangle
+            {
+                Width = 80,
+                Height = 80,
+                Fill = mainWindow.creatObstacles.planeMissile1
+            };
+
+            double left = Canvas.GetLeft(mainWindow.airPlane) + mainWindow.airPlane.Width / 2 - Missile.Width / 2;
+            double top = Canvas.GetTop(mainWindow.airPlane) - Missile.Height;
+
+            Canvas.SetLeft(Missile, left);
+            Canvas.SetTop(Missile, top+80);
+
+            mainWindow.unScrollingContent.Children.Add(Missile);
+            MissileList.Add(Missile);
+        }
+
+        public void MoveMissiles()
+        {
+            for (int i = MissileList.Count - 1; i >= 0; i--)
+            {
+                var b = MissileList[i];
+                double top = Canvas.GetTop(b);
+
+                if (Canvas.GetTop(b) >= 185)
+                {
+                    top = Canvas.GetTop(b) - 5; // سرعت گلوله
+                    Canvas.SetTop(b, top);
+                }
+                else if(Canvas.GetTop(b) < 185 && Canvas.GetTop(b) > 175)
+                {
+                    top = Canvas.GetTop(b) - .15; // سرعت گلوله
+                    Canvas.SetTop(b, top);
+                }
+                else
+                {
+                    top = Canvas.GetTop(b)-25; // سرعت گلوله
+                    Canvas.SetTop(b, top);
+                }
+
+                if (top < -50)
+                {
+                    mainWindow.unScrollingContent.Children.Remove(b);
+                    MissileList.RemoveAt(i);
+                }
+            }
+        }
+
 
         public void Shot()
         {
@@ -273,7 +542,7 @@ namespace River_Raid_WPF
             {
                 Width = 5,
                 Height = 15,
-                Fill = Brushes.Gray
+                Fill = mainWindow.creatObstacles.planeBullet
             };
 
             double left = Canvas.GetLeft(mainWindow.airPlane) + mainWindow.airPlane.Width / 2 - bullet.Width / 2;
@@ -305,7 +574,8 @@ namespace River_Raid_WPF
 
         public void ShootTimer_Tick(object sender, EventArgs e)
         {
-            Shot();
+            if(mainWindow.Missile) MissileLaunch();
+            else if(mainWindow.Bullets) Shot();
         }
 
 
@@ -377,8 +647,8 @@ namespace River_Raid_WPF
                 // گلوله پیشفرض موجودات فضایی
                 b = new Rectangle
                 {
-                    Width = 6,
-                    Height = 10,
+                    Width = 12,
+                    Height = 20,
                     Fill = mainWindow.creatObstacles.spaceCreaturesBullet
                 };
             }
@@ -386,10 +656,38 @@ namespace River_Raid_WPF
             Canvas.SetLeft(b, Canvas.GetLeft(c) + c.Width / 2 - b.Width / 2);
             Canvas.SetTop(b, Canvas.GetTop(c) + c.Height);
 
+            StartBulletAnimation(b);
+
             mainWindow.scrollContent3.Children.Add(b);
             bullets.Add(b);
         }
 
+        DispatcherTimer timer = new DispatcherTimer();
+
+        public void StartBulletAnimation(Rectangle b)
+        {
+            // تایمر مخصوص این گلوله
+            DispatcherTimer t = new DispatcherTimer();
+            t.Interval = TimeSpan.FromMilliseconds(120);
+
+            t.Tick += (s, e) =>
+            {
+                // اگر گلوله از Canvas حذف شده بود → تایمر را متوقف کن
+                if (!mainWindow.scrollContent3.Children.Contains(b))
+                {
+                    t.Stop();
+                    return;
+                }
+
+                // انیمیشن سوئیچ بین دو فریم
+                if (b.Fill == mainWindow.creatObstacles.spaceCreaturesBullet)
+                    b.Fill = mainWindow.creatObstacles.spaceCreaturesBullet2;
+                else if (b.Fill == mainWindow.creatObstacles.spaceCreaturesBullet2)
+                    b.Fill = mainWindow.creatObstacles.spaceCreaturesBullet;
+            };
+
+            t.Start();
+        }
 
         public void StartBulletMovement()
         {
@@ -401,7 +699,7 @@ namespace River_Raid_WPF
                 for (int i = bullets.Count - 1; i >= 0; i--)
                 {
                     var b = bullets[i];
-                    Canvas.SetTop(b, Canvas.GetTop(b) + 6);
+                    Canvas.SetTop(b, Canvas.GetTop(b) + 3);
 
                     if (Canvas.GetTop(b) > mainWindow.gameCanvas.Height)
                     {

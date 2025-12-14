@@ -6,6 +6,7 @@ E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2
 E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2-2.mp3
 E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Background 2-3.mp3
 E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Mystery Box.wav
+E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Shayan Sound.wav
 E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\silence.wav
 E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\toby fox - UNDERTALE Soundtrack - 70 Long Elevator.mp3
 E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Backgroud Theme.mp3
@@ -39,9 +40,9 @@ E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.Gen
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.AssemblyInfoInputs.cache
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.AssemblyInfo.cs
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.csproj.CoreCompileInputs.cache
+E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.sourcelink.json
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.dll
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\refint\River Raid WPF.dll
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.pdb
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\River Raid WPF.genruntimeconfig.cache
 E:\C#\Projects\Shayan\River Raid WPF\obj\Debug\net8.0-windows\ref\River Raid WPF.dll
-E:\C#\Projects\Shayan\River Raid WPF\bin\Debug\net8.0-windows\Sound\Shayan Sound.wav

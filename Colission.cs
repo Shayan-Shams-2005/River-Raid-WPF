@@ -14,6 +14,11 @@ namespace River_Raid_WPF
 
         public MainWindow mainWindow;
 
+        public int PlanetShootCount = 0;
+        public int SpaceShipShootCount = 0;
+
+        public bool SpaceShipDestroyed = false;
+
         public Collision(MainWindow mainWindow)
         {
             this.mainWindow = mainWindow;
@@ -34,7 +39,7 @@ namespace River_Raid_WPF
                               .ToList();
 
             var bullets = mainWindow.unScrollingContent.Children.OfType<Rectangle>()
-                              .Where(b => b.Fill == Brushes.Gray && b.Tag == null)
+                              .Where(b => b.Fill == mainWindow.creatObstacles.planeBullet && b.Tag == null)
                               .ToList();
 
             // 📌 Transform فقط یک بار برای هر مانع
@@ -93,7 +98,7 @@ namespace River_Raid_WPF
 
         private bool IsObstacle(Rectangle rect) =>
             rect.Tag != null && !rect.Name.ToString().Contains("Fuel") || rect.Fill==mainWindow.creatObstacles.UfoBullet || rect.Fill == Brushes.LimeGreen || rect.Fill == Brushes.DarkGreen
-            || rect.Fill== mainWindow.creatObstacles.spaceCreaturesBullet || rect.Fill==Brushes.Orange; 
+            || rect.Fill== mainWindow.creatObstacles.spaceCreaturesBullet || rect.Fill == mainWindow.creatObstacles.spaceCreaturesBullet2 || rect.Fill==Brushes.Orange; 
 
         private bool IsDestroyed(Rectangle rect) =>
             rect.Fill == mainWindow.creatObstacles.RightDestroyedHelicopter ||
@@ -106,7 +111,12 @@ namespace River_Raid_WPF
             rect.Fill == mainWindow.creatObstacles.DestroyedUFOImage ||
             rect.Fill == mainWindow.creatObstacles.DestroyedRightUFOImage ||
             rect.Fill == mainWindow.creatObstacles.DestroyedSpaceFuelImage ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip16 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip26 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip33 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip46 ||
             rect.Fill==Brushes.Red ||
+            rect.Fill==mainWindow.creatObstacles.DestroyedSpaceCreaturesBullet ||
             rect.Fill == mainWindow.creatObstacles.DestroyedUfoBullet;
 
         private bool IsDestroyable(Rectangle rect) =>
@@ -116,7 +126,24 @@ namespace River_Raid_WPF
             rect.Fill == mainWindow.creatObstacles.LeftShipImage ||
             rect.Fill == mainWindow.creatObstacles.FuelImage ||
             rect.Fill == Brushes.Orange ||
-            rect.Fill == Brushes.MediumPurple ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip11 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip12 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip13 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip14 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip15 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip21 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip22 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip23 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip24 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip25 ||
+             rect.Fill == mainWindow.creatObstacles.SpaceShip31 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip32 ||
+             rect.Fill == mainWindow.creatObstacles.SpaceShip41 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip42 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip43 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip44 ||
+            rect.Fill == mainWindow.creatObstacles.SpaceShip45 ||
+            rect.Fill == mainWindow.creatObstacles.Mars ||
             mainWindow.creatObstacles.spaceCreatures1.Contains(rect.Fill)||
             mainWindow.creatObstacles.spaceCreatures2.Contains(rect.Fill) ||
             rect.Fill == mainWindow.creatObstacles.SpaceCreature2Image ||
@@ -124,6 +151,7 @@ namespace River_Raid_WPF
             rect.Fill == mainWindow.creatObstacles.RightUFOImage ||
             rect.Fill == mainWindow.creatObstacles.SpaceFuelImage|| 
             rect.Fill == mainWindow.creatObstacles.spaceCreaturesBullet||
+            rect.Fill == mainWindow.creatObstacles.spaceCreaturesBullet2 ||
             rect.Fill == mainWindow.creatObstacles.UfoBullet || 
             rect.Fill==mainWindow.creatObstacles.UsedFuelImage ||
             rect.Fill==mainWindow.creatObstacles.usedSpaceFuelImage;
@@ -132,7 +160,7 @@ namespace River_Raid_WPF
         {
             if (int.Parse(mainWindow.LevelCount.Text) >= 6)
             {
-                //mainWindow.Sound.PlaneExplosionSound();
+                // mainWindow.Sound.PlaneExplosionSound();
                 //mainWindow.restart.GameOver();
             }
             if (mainWindow.tbHealth.Text != "1")
@@ -177,7 +205,6 @@ namespace River_Raid_WPF
             else if (rect.Fill == mainWindow.creatObstacles.UsedFuelImage) rect.Fill = mainWindow.creatObstacles.DestroyedusedFuel;
             else if (rect.Fill == mainWindow.creatObstacles.SpaceFuelImage) rect.Fill = mainWindow.creatObstacles.DestroyedSpaceFuelImage;
             else if (rect.Fill == mainWindow.creatObstacles.usedSpaceFuelImage) rect.Fill = mainWindow.creatObstacles.DestroyedusedSpaceFuelImage;
-            else if (rect.Fill == mainWindow.creatObstacles.spaceCreaturesBullet) rect.Fill = Brushes.Red;
             else if (rect.Name.ToString() == "SpaceCreature1")
             {
                 rect.Fill = mainWindow.creatObstacles.DestroyedSpaceCreature1Image;
@@ -188,16 +215,16 @@ namespace River_Raid_WPF
                 rect.Fill = mainWindow.creatObstacles.DestroyedSpaceCreature2Image;
                 mainWindow.movingObstacles.spaceCreatures.Remove(rect);
             }
-            else if (rect.Fill==mainWindow.creatObstacles.UFOImage)
+            else if (rect.Fill == mainWindow.creatObstacles.UFOImage)
             {
                 rect.Fill = mainWindow.creatObstacles.DestroyedUFOImage;
-                if(rect==mainWindow.UFO1)
+                if (rect == mainWindow.UFO1)
                 {
                     mainWindow.scroll.InvokedShowUFO1 = false;
                 }
                 if (rect == mainWindow.UFO2)
                 {
-                    mainWindow.scroll.InvokedShowUFO2= false;
+                    mainWindow.scroll.InvokedShowUFO2 = false;
                 }
             }
             else if (rect.Fill == mainWindow.creatObstacles.RightUFOImage)
@@ -215,11 +242,82 @@ namespace River_Raid_WPF
             }
             else if (rect.Fill == Brushes.Orange)
                 rect.Fill = Brushes.Red;
-            else if (rect.Fill == Brushes.MediumPurple)
+            else if (rect.Name.Contains("SpaceShip") && rect.Fill != mainWindow.creatObstacles.SpaceShip31 && rect.Fill != mainWindow.creatObstacles.SpaceShip32)
+            {
+                SpaceShipShootCount++;
+                if (SpaceShipShootCount == 5)
+                {
+                    if (rect.Fill == mainWindow.creatObstacles.SpaceShip11) rect.Fill = mainWindow.creatObstacles.SpaceShip12;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip12) rect.Fill = mainWindow.creatObstacles.SpaceShip13;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip13) rect.Fill = mainWindow.creatObstacles.SpaceShip14;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip14) rect.Fill = mainWindow.creatObstacles.SpaceShip15;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip21) rect.Fill = mainWindow.creatObstacles.SpaceShip22;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip22) rect.Fill = mainWindow.creatObstacles.SpaceShip23;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip23) rect.Fill = mainWindow.creatObstacles.SpaceShip24;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip24) rect.Fill = mainWindow.creatObstacles.SpaceShip25;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip41) rect.Fill = mainWindow.creatObstacles.SpaceShip42;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip42) rect.Fill = mainWindow.creatObstacles.SpaceShip43;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip43) rect.Fill = mainWindow.creatObstacles.SpaceShip44;
+                    else if (rect.Fill == mainWindow.creatObstacles.SpaceShip44) rect.Fill = mainWindow.creatObstacles.SpaceShip45;
+                    SpaceShipShootCount = 0;
+                }
+                else if (rect.Fill == mainWindow.creatObstacles.SpaceShip15 && SpaceShipShootCount==1)
+                {
+                    rect.Fill = mainWindow.creatObstacles.SpaceShip16;
+                    SpaceShipDestroyed = true;
+                    SpaceShipShootCount = 0;
+                }
+
+                else if (rect.Fill == mainWindow.creatObstacles.SpaceShip25 && SpaceShipShootCount == 1)
+                {
+                    rect.Fill = mainWindow.creatObstacles.SpaceShip26;
+                    SpaceShipDestroyed = true;
+                    SpaceShipShootCount = 0;
+                }
+
+                else if (rect.Fill == mainWindow.creatObstacles.SpaceShip45 && SpaceShipShootCount == 1)
+                {
+                    rect.Fill = mainWindow.creatObstacles.SpaceShip46;
+                    SpaceShipDestroyed = true;
+                    SpaceShipShootCount = 0;
+                }
+            }
+            
+        
+            
+
+            if (rect.Name.Contains("SpaceShip") && (rect.Fill == mainWindow.creatObstacles.SpaceShip31 || rect.Fill == mainWindow.creatObstacles.SpaceShip32))
+            {
+               SpaceShipShootCount++;
+               if (rect.Fill == mainWindow.creatObstacles.SpaceShip31) rect.Fill = mainWindow.creatObstacles.SpaceShip32;
+               else if (rect.Fill == mainWindow.creatObstacles.SpaceShip32) rect.Fill = mainWindow.creatObstacles.SpaceShip31;
+
+               if(SpaceShipShootCount==20)
+                {
+                    rect.Fill = mainWindow.creatObstacles.SpaceShip33;
+                    SpaceShipDestroyed = true;
+                    SpaceShipShootCount = 0;
+                }
+
+            }
+            else if (rect.Fill == mainWindow.creatObstacles.Mars && PlanetShootCount <= 4)
+            {
+                PlanetShootCount++;
+                mainWindow.scroll.spaceIntroPlayed = false;
+            }
+            else if (rect.Fill == mainWindow.creatObstacles.Mars && PlanetShootCount == 5)
             {
                 rect.Fill = Brushes.Red;
             }
-            else if(rect.Fill==mainWindow.creatObstacles.UfoBullet) rect.Fill=mainWindow.creatObstacles.DestroyedUfoBullet;
+            else if(rect.Fill==mainWindow.creatObstacles.spaceCreaturesBullet || rect.Fill==mainWindow.creatObstacles.spaceCreaturesBullet2)
+            {
+                rect.Width = 40;
+                rect.Height = 40;
+                Canvas.SetLeft(rect, Canvas.GetLeft(rect) - 14);
+                Canvas.SetTop(rect, Canvas.GetTop(rect) - 14);
+                rect.Fill = mainWindow.creatObstacles.DestroyedSpaceCreaturesBullet;
+            }
+            else if (rect.Fill == mainWindow.creatObstacles.UfoBullet) rect.Fill = mainWindow.creatObstacles.DestroyedUfoBullet;
                 if (random.Next(0, 5) == 0)
             {
                 int dialogIndex = rect.Name.ToString() switch
@@ -238,8 +336,11 @@ namespace River_Raid_WPF
             
 
             await Task.Delay((int)(3 / mainWindow.scroll.scrollSpeed * 1000));
-            rect.Visibility = Visibility.Collapsed;
-            mainWindow.unScrollingContent.Children.Remove(bullet);
+            if ((rect.Fill != mainWindow.creatObstacles.Mars && !rect.Name.Contains("SpaceShip")) || (rect.Fill == mainWindow.creatObstacles.Mars && PlanetShootCount == 5) || (rect.Name.Contains("SpaceShip") && SpaceShipDestroyed))
+            {
+                rect.Visibility = Visibility.Collapsed;
+            }                    
+               mainWindow.unScrollingContent.Children.Remove(bullet);
         }
     }
 }

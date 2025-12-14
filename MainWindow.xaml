@@ -91,8 +91,28 @@
                         <Rectangle Fill="Yellow" x:Name="Fuel1" Width="70" Height="70" Canvas.Left="65" Canvas.Top="-300" Visibility="Collapsed"/>
                         <Rectangle Fill="Yellow" x:Name="Fuel2" Width="70" Height="70" Canvas.Left="665" Canvas.Top="-300" Visibility="Collapsed"/>
 
-                        <Rectangle x:Name="MysteryBox" Fill="MediumPurple" Canvas.Left="345" Visibility="Collapsed" Canvas.Top="50" Width="100" Height="100"/>
-                        <Image x:Name="King" Source="/Pictures/The King.png" Height="100" Width="100" Canvas.Left="80" Canvas.Top="50" Visibility="Collapsed"/>
+                        <Rectangle x:Name="SpaceShip" Fill="MediumPurple" Canvas.Left="295" Visibility="Collapsed" Canvas.Top="-30" Width="200" Height="200"/>
+                        <Rectangle x:Name="Planet" Canvas.Left="650" Fill="Aqua" Visibility="Collapsed" Canvas.Top="10" Width="40" Height="40"/>
+
+                        <Image x:Name="Portal" Source="/Pictures/Portal.png" Width="300" Height="150" Canvas.Top="50" Canvas.Left="235" Visibility="Collapsed"/>
+                        <Image x:Name="Portal2" Source="/Pictures/Portal2.png" Width="30" Height="30" Canvas.Top="14" Canvas.Left="620" Visibility="Collapsed"/>
+
+
+                        <Image x:Name="KingsSpaceShip"
+Source="/Pictures/KingsSpaceShip1.png"
+Visibility="Collapsed"
+Width="20"
+Height="20"
+Canvas.Left="660"
+Canvas.Top="25"
+Panel.ZIndex="4">
+                            <Image.RenderTransform>
+                                <ScaleTransform x:Name="kingScale" ScaleX=".25" ScaleY=".25"/>
+                            </Image.RenderTransform>
+                        </Image>
+
+
+                        <Image x:Name="King" Source="/Pictures/The King.png" Height="80" Width="80" Canvas.Left="259.25" Canvas.Top="110.25" Visibility="Collapsed"/>
                         <Viewbox Stretch="Fill" Margin="-50,10,-50,10" Canvas.Left="200" Canvas.Top="60">
                             <Border x:Name="KingsDialogBorder" Visibility="Hidden" BorderThickness="1" Margin="0,0,0,0" BorderBrush="Black" Background="White">
                                 <TextBlock
@@ -112,7 +132,7 @@
 
                     <Canvas Name="unScrollingContent">
                         <Rectangle x:Name="CanbeSeen" Fill="Pink" Width="800" Height="20" Canvas.Left="0" Canvas.Top="0" Visibility="Hidden"/>
-                        <Image x:Name="airPlane" Source="/Pictures/Air Plane.png" Width="53" Height="80" Canvas.Left="374" Canvas.Top="230" Panel.ZIndex="5" Stretch="Fill" Opacity="0.995"/>
+                        <Image x:Name="airPlane" Source="/Pictures/Air Plane.png" Width="53" Height="80" Canvas.Left="374" Canvas.Top="235" Panel.ZIndex="5" Stretch="Fill" Opacity="0.995"/>
                         <Rectangle x:Name="CantSeen" Fill="Pink" Width="800" Height="20" Canvas.Left="0" Canvas.Top="430" Visibility="Hidden"/>
 
                     </Canvas>
@@ -231,7 +251,7 @@
 
         </Viewbox>
 
-        <Grid Grid.Row="1" Background="Gray">
+            <Grid Grid.Row="1" Background="Gray">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -252,8 +272,11 @@
                     </TextBlock>
                 </Viewbox>
 
-                <Image Grid.Column="1" x:Name="Shayan" Source="/Pictures/Shayan Shams.png"/>
-                
+                <Viewbox Grid.Column="1">
+                    <Canvas x:Name="ShayanCanvas" Width="130" Height="108.5">
+                        <Image  Canvas.Left="10" Canvas.Top="0" Width="108.5" x:Name="Shayan"  Source="/Pictures/Shayan Shams.png"/>
+                    </Canvas>
+                </Viewbox>
             </Grid>
             <Grid Grid.Column="2">
                 <Grid.ColumnDefinitions>
@@ -272,7 +295,16 @@
                 </Viewbox>
                 <Viewbox Margin="30,10,5,10">
                     <Grid>
-                        <Border BorderBrush="Black" BorderThickness="5" Width="30" Height="80">
+                        <Border Visibility="Visible" BorderBrush="Black" BorderThickness="5" x:Name="BulletBorder" Width="30" Height="80">
+                            <Canvas>
+                                <Rectangle Width="20" Height="35" Fill="Red"/>
+                                <Image Source="/Pictures/Plane Bullet1.png" Width="40" Canvas.Left="-10" Height="40" Canvas.Top="-2"/>
+                                <Rectangle Canvas.Top="35" Width="20" Height="35" Fill="Yellow"/>
+                                <Image Source="/Pictures/Plane Bullet.png" Width="20" Height="20" Canvas.Top="42"/>
+                                <Rectangle x:Name="BulletRect" Fill="Black" Width="6" Height="4" Canvas.Left="14" Canvas.Top="50"/>
+                            </Canvas>
+                        </Border>
+                        <Border x:Name="SpeedBorder" Visibility="Collapsed" BorderBrush="Black" BorderThickness="5" Width="30" Height="80">
                             <Canvas>
                                 <Rectangle x:Name="Speed10" Fill="Purple" Width="20" Height="14"/>
                                 <Rectangle x:Name="Speed8" Fill="Red" Width="20" Height="14" Canvas.Top="14"/>

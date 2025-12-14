@@ -37,6 +37,41 @@ namespace River_Raid_WPF
             usedSpaceFuelImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Used Space Fuel.png"));
             UfoBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/UFO Bullet.png"));
 
+            SpaceShip11.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip1-1.png"));
+            SpaceShip12.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip1-2.png"));
+            SpaceShip13.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip1-3.png"));
+            SpaceShip14.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip1-4.png"));
+            SpaceShip15.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip1-5.png"));
+            SpaceShip16.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip1-6.png"));
+
+            SpaceShip21.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip2-1.png"));
+            SpaceShip22.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip2-2.png"));
+            SpaceShip23.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip2-3.png"));
+            SpaceShip24.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip2-4.png"));
+            SpaceShip25.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip2-5.png"));
+            SpaceShip26.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip2-6.png"));
+
+            SpaceShip31.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip3-1.png"));
+            SpaceShip32.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip3-2.png"));
+            SpaceShip33.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip3-3.png"));
+
+            SpaceShip41.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip4-1.png"));
+            SpaceShip42.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip4-2.png"));
+            SpaceShip43.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip4-3.png"));
+            SpaceShip44.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip4-4.png"));
+            SpaceShip45.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip4-5.png"));
+            SpaceShip46.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/SpaceShip4-6.png"));
+
+            kingsSpaceShip1 = new BitmapImage(new Uri("pack://application:,,,/Pictures/KingsSpaceShip1.png"));
+            kingsSpaceShip2 = new BitmapImage(new Uri("pack://application:,,,/Pictures/KingsSpaceShip2.png"));
+            kingsSpaceShip3 = new BitmapImage(new Uri("pack://application:,,,/Pictures/KingsSpaceShip3.png"));
+            kingsSpaceShip4 = new BitmapImage(new Uri("pack://application:,,,/Pictures/KingsSpaceShip4.png"));
+            kingsSpaceShip5 = new BitmapImage(new Uri("pack://application:,,,/Pictures/KingsSpaceShip5.png"));
+            kingsSpaceShip6 = new BitmapImage(new Uri("pack://application:,,,/Pictures/KingsSpaceShip6.png"));
+
+
+            Mars.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Planet.png"));
+
             RightDestroyedHelicopter.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/RightDestroyed Helicopter.png"));
             LeftDestroyedHelicopter.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/LeftDestroyed Helicopter.png"));
             RightDestroyedShip.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/RightDestroyed Ship.png"));
@@ -61,7 +96,17 @@ namespace River_Raid_WPF
             RightUFOImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Right UFO.png"));
             DestroyedUFOImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Destroyed UFO.png"));
             DestroyedRightUFOImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Destroyed Right UFO.png"));
-            spaceCreaturesBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Space Creatures Bullet.png"));
+            spaceCreaturesBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Space Enemies Bullet1.png"));
+            spaceCreaturesBullet2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Space Enemies Bullet2.png"));
+
+            planeBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Plane Bullet.png"));
+            planeMissile1.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Plane Bullet1.png"));
+            planeMissile2.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Plane Bullet1.png"));
+
+
+            DestroyedSpaceCreaturesBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Plane Bullet.png"));
+            DestroyedSpaceCreaturesBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Plane Bullet.png"));
+            DestroyedSpaceCreaturesBullet.ImageSource = new BitmapImage(new Uri("pack://application:,,,/Pictures/Plane Bullet.png"));
 
         }
 
@@ -88,6 +133,43 @@ namespace River_Raid_WPF
         public ImageBrush UFOImage=new ImageBrush();
         public ImageBrush RightUFOImage = new ImageBrush();
 
+        public ImageBrush SpaceShip11 = new ImageBrush();
+        public ImageBrush SpaceShip12 = new ImageBrush();
+        public ImageBrush SpaceShip13 = new ImageBrush();
+        public ImageBrush SpaceShip14 = new ImageBrush();
+        public ImageBrush SpaceShip15 = new ImageBrush();
+        public ImageBrush SpaceShip16 = new ImageBrush();
+
+        public ImageBrush SpaceShip21 = new ImageBrush();
+        public ImageBrush SpaceShip22 = new ImageBrush();
+        public ImageBrush SpaceShip23 = new ImageBrush();
+        public ImageBrush SpaceShip24 = new ImageBrush();
+        public ImageBrush SpaceShip25 = new ImageBrush();
+        public ImageBrush SpaceShip26 = new ImageBrush();
+
+        public ImageBrush SpaceShip31 = new ImageBrush();
+        public ImageBrush SpaceShip32 = new ImageBrush();
+        public ImageBrush SpaceShip33 = new ImageBrush();
+
+        public ImageBrush SpaceShip41 = new ImageBrush();
+        public ImageBrush SpaceShip42 = new ImageBrush();
+        public ImageBrush SpaceShip43 = new ImageBrush();
+        public ImageBrush SpaceShip44 = new ImageBrush();
+        public ImageBrush SpaceShip45 = new ImageBrush();
+        public ImageBrush SpaceShip46 = new ImageBrush();
+
+        public BitmapImage kingsSpaceShip1;
+        public BitmapImage kingsSpaceShip2;
+        public BitmapImage kingsSpaceShip3;
+        public BitmapImage kingsSpaceShip4;
+        public BitmapImage kingsSpaceShip5;
+        public BitmapImage kingsSpaceShip6;
+
+
+
+        public ImageBrush Mars = new ImageBrush();
+
+
         public ImageBrush RightDestroyedHelicopter = new ImageBrush();
         public ImageBrush LeftDestroyedHelicopter = new ImageBrush();
         public ImageBrush RightDestroyedShip = new ImageBrush();
@@ -100,12 +182,15 @@ namespace River_Raid_WPF
         public ImageBrush DestroyedSpaceCreature2Image = new ImageBrush();
         public ImageBrush DestroyedUFOImage = new ImageBrush();
         public ImageBrush DestroyedRightUFOImage = new ImageBrush();
-
+        public ImageBrush DestroyedSpaceCreaturesBullet = new ImageBrush();
 
         public ImageBrush UfoBullet = new ImageBrush();
         public ImageBrush spaceCreaturesBullet=new ImageBrush();
+        public ImageBrush spaceCreaturesBullet2 = new ImageBrush();
         public ImageBrush DestroyedUfoBullet = new ImageBrush();
-
+        public ImageBrush planeBullet=new ImageBrush();
+        public ImageBrush planeMissile1 = new ImageBrush();
+        public ImageBrush planeMissile2 = new ImageBrush();
 
         //Space Creatures1 Locations
         public int[] Run1Creatures1Left = { 250, 300, 350, 400, 450, 500, 250, 300, 350, 400, 450, 500, 250, 300, 350, 400, 450, 500, 250, 300, 350, 400, 450, 500 };

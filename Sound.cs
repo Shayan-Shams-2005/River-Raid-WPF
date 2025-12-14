@@ -70,7 +70,7 @@ namespace River_Raid_WPF
                 }
                 
             }
-            if (mainWindow.MysteryBox.Fill == Brushes.Red && !mainWindow.creatObstacles.Creatures1Creating && level==7 && !mainWindow.restart.ClearedObsatacles)
+            if (mainWindow.SpaceShip.Fill==mainWindow.creatObstacles.SpaceShip26 && !mainWindow.creatObstacles.Creatures1Creating && level==7 && !mainWindow.restart.ClearedObsatacles)
             {
                 if (bgPath == System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sound/silence.wav"))
                 {
@@ -193,8 +193,12 @@ namespace River_Raid_WPF
                     path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sound/UFO Bullet Explosion.wav");
                 else if (rect.Fill == mainWindow.creatObstacles.spaceCreaturesBullet)
                     path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sound/Creatures Bullet Explosion.wav");
-                else if (rect.Fill == Brushes.MediumPurple)
+                else if (rect.Name.ToString()=="SpaceShip" && rect.Name.ToString() == "6" && rect.Fill!=mainWindow.creatObstacles.Mars)
                     path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sound/Mystery Box.wav");
+                else if (rect.Fill == mainWindow.creatObstacles.Mars)
+                {
+                    path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sound/Huge Explosion.wav");
+                }
                 else
                     path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sound/Space Creatures Down.wav");
             }
